@@ -1,4 +1,4 @@
-# Fellowship.AI Challenge on Omniglot Dataset
+# Fellowship.AI Few-Shot Learning Challenge
 
 ## Introduction
 
@@ -9,15 +9,15 @@ This is an implementation of Siamese Networks for One-Shot Learning as described
 
 ## Installation
 
-Make sure to have Keras installed with Tensorflow backend and their associated dependencies. 
- This project was completed with following versions of those libaries.
+Make sure to have the listed versions (or the latest) of Keras installed with Tensorflow backend and their associated dependencies. 
+ Also make sure to have the base Python machine learning libraries such as NumPy, Scipy, iPython, etc installed as well. 
 ```
 Keras 2.1.2
-Tensorflow 1.2.1
-Numpy 1.13.3
+TensorFlow 1.2.1
 ```
 
 ## The Omniglot Dataset 
+
 Omniglot can be downloaded from [here](https://github.com/brendenlake/omniglot). 
  Omniglot is a dataset of 1623 handwritten digits from 50 different alphabets. 
  The training set consists of 30 alphabets and the evaluation set consists of 20 alphabets. 
@@ -57,9 +57,9 @@ N_WAY = 5
 ```
 
  Data augmentation and layer-wise learning rates are not used here like in the original paper. 
- In addition, a contrastive loss fuction was used which provided improvement in performance. Be careful changing 
- any parameters or hyperparemeters especially for the network utilizing contrastive loss. The model utilizing 
- contrastive loss  was somewhat difficult to implement as either the model did not train at all or gradient 
+ In addition, a contrastive loss function was used which provided improvement in performance. Be careful changing 
+ any parameters or hyperparameters especially for the network utilizing contrastive loss. The model utilizing 
+ contrastive loss was somewhat difficult to implement as either the model did not train at all or gradient 
  updates resulted in gradient explosion. The implementation of the contrastive loss function itself differs 
  from the standard one found as a utility in the Keras repository. 
  If you would like to train for more batch iterations you can do so by changing the variable in 
@@ -70,6 +70,7 @@ TRAIN_BATCH = 12000
 ```
 
 ## Acknowledgements
+
 Thanks to [Soren Bouma](https://sorenbouma.github.io/blog/oneshot/) for their blog post 
  and implementation of which several parts were used.
 
@@ -85,4 +86,4 @@ Final thanks to [Rik Nijessen](https://github.com/gewoonrik/duplicate_prs) for
 ## Related Work
 [1] **Matching Networks for One Shot Learning**, Oriol Vinyals, Charles Blundell, Timothy Lillicrap, Koray Kavukcuoglu and Daan Wierstra, https://arxiv.org/abs/1606.04080 , 2016 <br/>
 
-[2] **Learning to Compare: Relation Network for Few-Shot Learning**, Flood Sung, Yongxin Yang, Li Zhang, Tao Xiang, Philip H.S. Torr, Timothy H. Hospedales, https://arxiv.org/abs/1711.06025 , 2018 <br/># fewshot
+[2] **Learning to Compare: Relation Network for Few-Shot Learning**, Flood Sung, Yongxin Yang, Li Zhang, Tao Xiang, Philip H.S. Torr, Timothy H. Hospedales, https://arxiv.org/abs/1711.06025 , 2018 <br/>
